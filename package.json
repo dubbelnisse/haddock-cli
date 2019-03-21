@@ -1,0 +1,29 @@
+{
+  "name": "haddock",
+  "version": "1.0.0",
+  "description": "Get Captain Haddock quotes",
+  "main": "./lib/index.js",
+  "bin": {
+    "haddock": "./lib/index.js"
+  },
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc -p .",
+    "test": "sudo npm i -g && haddock",
+    "create": "npm run build && npm run test"
+  },
+  "author": "Nils Nilsson (nilspontusnilsson@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "2.19.0",
+    "csvtojson": "2.0.8",
+    "path": "0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "11.11.4",
+    "nodemon": "1.18.10",
+    "ts-node": "8.0.3",
+    "tslint": "5.14.0",
+    "typescript": "3.3.4000"
+  }
+}
