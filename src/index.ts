@@ -4,7 +4,7 @@ import program from 'commander'
 import { getRandomQuote } from './utils/quotes'
 
 program
-  .version('0.0.1', '-v, --version')
+  .version('1.0.0', '-v, --version')
   .description("Learn how to speak like Captain Haddock")
   .option('-l, --language [value]', 'Use language. Supported: sv,en', 'en')
   .action(() => {

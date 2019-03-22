@@ -2,22 +2,31 @@
   "name": "haddock",
   "version": "1.0.0",
   "description": "Get Captain Haddock quotes",
-  "main": "./lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
-    "haddock": "./lib/index.js"
+    "haddock": "dist/index.js"
   },
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "build": "tsc -p .",
-    "test": "sudo npm i -g && haddock",
-    "create": "npm run build && npm run test"
+    "start": "npm run build && sudo npm i -g",
+    "build": "tsc -p ."
   },
-  "author": "Nils Nilsson (nilspontusnilsson@gmail.com)",
-  "license": "ISC",
+  "author": "Nils Nilsson <nilspontusnilsson@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dubbelnisse/haddock.git"
+  },
+  "keywords": [
+    "CLI",
+    "Haddock",
+    "Tintin"
+  ],
+  "license": "MIT",
   "dependencies": {
     "commander": "2.19.0"
   },
   "devDependencies": {
+    "@types/commander": "2.12.2",
     "@types/node": "11.11.4",
     "nodemon": "1.18.10",
     "ts-node": "8.0.3",
