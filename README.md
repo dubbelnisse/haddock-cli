@@ -1,9 +1,9 @@
-# haddock
+# haddock-cli
 
 ## Installation
 
 ```
-$ npm install -g haddock
+$ npm install -g haddock-cli
 ```
 
 ## Usage
